@@ -1,0 +1,48 @@
+<div class="hold-transition register-page" style="padding-top: 100px;">
+    <div class="wrapper">
+        <div class="register-box">
+            <div class="register-logo">
+                <a href="login"><b>Login</b></a>
+            </div>
+
+            <div class="card">
+                <div class="card-body register-card-body">
+                    <p class="login-box-msg">I'm a membership</p>
+                    <form autocomplete="off">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username" placeholder="Username">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-eye-slash"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="row">
+                            <div class="col-8">
+                                <a href="/" class="btn btn-info btn-block">Cancel</a>
+                            </div>
+                            <div class="col-4">
+                                <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </form>
+                    <div class="alert alert-success" *ngIf="isLoggedIn">
+                        Logged in as {{ roles }}.
+                    </div>
+                </div>
+                <!-- /.form-box -->
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="container" style="padding-top: 50px;">
+    <header class="jumbotron">
+        <h1 *ngIf="content; else other_content">{{ content }}</h1>
+        <ng-template #other_content>No Content</ng-template>
+    </header>
+</div>

@@ -1,0 +1,50 @@
+<div class="hold-transition register-page" style="padding-top: 100px;">
+    <div class="wrapper">
+        <div class="register-box">
+            <div class="register-logo">
+                <a href="register"><b>Register</b></a>
+            </div>
+
+            <div class="card">
+                <div class="card-body register-card-body">
+                    <p class="login-box-msg">I'm a new membership</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username" placeholder="Username">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email" placeholder="Email">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-eye-slash"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="row">
+                            <div class="col-8">
+                                <a href="/" class="btn btn-info btn-block">Cancel</a>
+                            </div>
+                            <div class="col-4">
+                                <button (click)="onSubmit()" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </form>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
